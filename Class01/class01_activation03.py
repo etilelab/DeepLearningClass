@@ -17,6 +17,6 @@ y_man = tf.linalg.matmul(x, W) + B
 if activation == "sigmoid":
     y_man = 1/(1 + exp(-y_man))
 elif activation == "tanh":
-    y_man = (exp(y_man)- exp(-y_man)/exp(y_man) + exp(-y_man))
+    y_man = (exp(y_man) - exp(-y_man))/(exp(y_man) + exp(-y_man))
 elif activation == "relu":
     y_man = maximum(x, 0)
